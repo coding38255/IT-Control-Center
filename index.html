@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Путь к цели — бюджет, путешествие и первые инвестиции</title>
+<meta name="description" content="Образовательный сайт о личных финансах: как составить бюджет, накопить на путешествие без кредитов и сделать первые шаги в инвестициях.">
+<meta property="og:title" content="Путь к цели — бюджет, путешествие и первые инвестиции">
+<meta property="og:description" content="Бюджет, который ведёт в путешествие и к первым инвестициям. Пошаговые инструкции, калькулятор накоплений и шаблон бюджета.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cpath d='M8 22l6-6 4 4 7-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f6faf9; --surface:#ffffff; --surface-2:#eef6f4;
+  --text:#18282c; --muted:#4f6267; --border:#dbe6e3;
+  --accent:#0f766e; --accent-hover:#0b5f58; --accent-soft:#d6efeb;
+  --sun:#b45309; --sun-soft:#fdf0dc;
+  --violet:#5b4fc7; --violet-soft:#e9e7fb;
+  --danger:#b42318; --danger-soft:#fdecea;
+  --ok:#157f3c; --ok-soft:#e3f5e9;
+  --radius:14px; --radius-sm:10px;
+  --shadow:0 1px 2px rgba(16,40,44,.06),0 4px 16px rgba(16,40,44,.06);
+  --max:1120px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--font)}
+img,svg{max-width:100%;display:block}
+a{color:var(--accent)}
+a:hover{color:var(--accent-hover)}
+:focus-visible{outline:3px solid #f59e0b;outline-offset:2px;border-radius:4px}
+h1,h2,h3{line-height:1.25;margin:0 0 .6em}
+h1{font-size:clamp(1.9rem,4.5vw,3rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.01em}
+h3{font-size:1.15rem}
+p{margin:0 0 1em}
+.container{max-width:var(--max);margin:0 auto;padding:0 16px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:var(--text);text-decoration:none}
+.logo-mark{width:34px;height:34px;border-radius:9px;background:var(--accent);display:grid;place-items:center}
+.nav-toggle{display:none;background:none;border:1px solid var(--border);border-radius:10px;padding:8px 12px;font:inherit;cursor:pointer;color:var(--text)}
+.main-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.main-nav a{display:block;padding:8px 10px;border-radius:8px;color:var(--text);text-decoration:none;font-size:.95rem}
+.main-nav a:hover{background:var(--surface-2)}
+.main-nav a[aria-current="page"]{background:var(--accent-soft);color:var(--accent-hover);font-weight:600}
+@media (max-width:960px){
+  .nav-toggle{display:block}
+  .main-nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;padding:8px 16px 16px}
+  .main-nav a{padding:12px}
+}
+
+/* Layout pieces */
+main{min-height:60vh}
+.page{padding:40px 0 64px}
+.page[hidden]{display:none}
+.section{margin-top:56px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:720px}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card h3{margin-bottom:.4em}
+.card p:last-child{margin-bottom:0}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:12px;font:600 1rem var(--font);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s,border-color .15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);color:#fff}
+.btn-outline{background:var(--surface);color:var(--accent);border-color:var(--accent)}
+.btn-outline:hover{background:var(--accent-soft)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+@media (max-width:860px){.hero{grid-template-columns:1fr}}
+.hero-visual{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.goal-row{margin-bottom:18px}
+.goal-row:last-child{margin-bottom:0}
+.goal-head{display:flex;justify-content:space-between;gap:12px;font-size:.95rem;margin-bottom:6px}
+.goal-head b{font-variant-numeric:tabular-nums}
+.bar{height:12px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.bar>span{display:block;height:100%;border-radius:99px;background:var(--accent);transition:width .5s ease}
+.bar.sun>span{background:#d97706}
+.bar.violet>span{background:var(--violet)}
+
+/* Steps */
+.steps{counter-reset:step;list-style:none;padding:0;margin:0}
+.step-card{position:relative;padding-top:56px}
+.step-card::before{counter-increment:step;content:counter(step);position:absolute;top:20px;left:22px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:grid;place-items:center;font-size:.9rem}
+.icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:12px;font-size:1.4rem}
+.icon.teal{background:var(--accent-soft)} .icon.sun{background:var(--sun-soft)} .icon.violet{background:var(--violet-soft)}
+
+/* Tables */
+.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+table{width:100%;border-collapse:collapse;min-width:520px}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--surface-2);font-size:.9rem}
+tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Callouts */
+.callout{border-radius:var(--radius);padding:18px 20px;border:1px solid;margin:24px 0}
+.callout p:last-child{margin:0}
+.callout-warn{background:var(--sun-soft);border-color:#f3d19e;color:#5b3305}
+.callout-info{background:var(--accent-soft);border-color:#b5e0d9;color:#0b3f3a}
+.checklist{list-style:none;padding:0;margin:0}
+.checklist li{position:relative;padding:10px 0 10px 36px;border-bottom:1px dashed var(--border)}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{content:"";position:absolute;left:0;top:12px;width:22px;height:22px;border-radius:6px;background:var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12l4 4 8-8' stroke='%230f766e' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+
+/* Forms */
+.form{display:grid;gap:14px}
+.field label{display:block;font-weight:600;margin-bottom:6px;font-size:.95rem}
+.field .hint{font-size:.85rem;color:var(--muted);margin-top:4px}
+input[type=text],input[type=email],input[type=number],textarea{width:100%;padding:12px 14px;border:1.5px solid #b9c9c5;border-radius:var(--radius-sm);font:inherit;background:#fff;color:var(--text)}
+input:focus,textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-soft)}
+input[aria-invalid="true"]{border-color:var(--danger)}
+.error{color:var(--danger);font-size:.88rem;margin-top:4px;min-height:0}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--muted)}
+.consent input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--accent)}
+.hp{position:absolute;left:-9999px}
+.form-msg{border-radius:var(--radius-sm);padding:12px 14px;font-size:.95rem}
+.form-msg.ok{background:var(--ok-soft);color:var(--ok)}
+.form-msg.err{background:var(--danger-soft);color:var(--danger)}
+.subscribe{background:linear-gradient(135deg,#0f766e,#115e59);color:#fff;border-radius:20px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.subscribe h2{color:#fff}
+.subscribe p{color:#d5f0eb}
+.subscribe .consent{color:#d5f0eb}
+.subscribe .consent a{color:#fff}
+.subscribe .inline{display:flex;gap:10px;flex-wrap:wrap}
+.subscribe .inline input{flex:1 1 200px;border-color:transparent}
+.subscribe .btn-primary{background:#fbbf24;color:#3b2603}
+.subscribe .btn-primary:hover{background:#f59e0b;color:#3b2603}
+.subscribe .error{color:#fecaca}
+.subscribe .form-msg.ok{background:rgba(255,255,255,.15);color:#fff}
+@media (max-width:760px){.subscribe{grid-template-columns:1fr;padding:24px}}
+
+/* Calculator */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:760px){.calc{grid-template-columns:1fr}}
+.result{background:var(--surface-2);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:14px}
+.result-main{font-size:2rem;font-weight:800;color:var(--accent-hover);font-variant-numeric:tabular-nums;line-height:1.1}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.result-grid div{background:var(--surface);border-radius:var(--radius-sm);padding:12px}
+.result-grid b{display:block;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.result .bar{height:16px}
+.result.done .result-main{color:var(--ok)}
+
+/* Accordion */
+.accordion{display:grid;gap:10px}
+.acc-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+.acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;background:none;border:none;padding:18px 20px;font:600 1.02rem var(--font);color:var(--text);cursor:pointer;border-radius:var(--radius)}
+.acc-btn::after{content:"+";font-size:1.5rem;line-height:1;color:var(--accent);transition:transform .2s}
+.acc-btn[aria-expanded="true"]::after{transform:rotate(45deg)}
+.acc-panel{padding:0 20px 18px;color:var(--muted)}
+
+/* Blog */
+.post-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.post-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,40,44,.1);color:inherit}
+.post-card h3{color:var(--text)}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent-hover);margin-bottom:10px}
+.tag.sun{background:var(--sun-soft);color:var(--sun)}
+.tag.violet{background:var(--violet-soft);color:var(--violet)}
+.post-meta{font-size:.85rem;color:var(--muted);margin-top:auto;padding-top:8px}
+.article{max-width:740px}
+.article h2{font-size:1.4rem;margin-top:1.6em}
+.article ul,.article ol{padding-left:1.3em}
+.article li{margin-bottom:.4em}
+.breadcrumbs{font-size:.9rem;margin-bottom:16px;color:var(--muted)}
+
+/* Footer */
+.site-footer{background:#10292b;color:#c8dbd8;padding:48px 0 32px;margin-top:40px}
+.site-footer a{color:#e7f4f2}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+@media (max-width:760px){.footer-grid{grid-template-columns:1fr}}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin-bottom:8px}
+.site-footer h3{color:#fff;font-size:1rem}
+.disclaimer{border-top:1px solid #2a4648;margin-top:32px;padding-top:20px;font-size:.88rem;color:#a9c2be}
+.link-btn{background:none;border:none;padding:0;color:#e7f4f2;text-decoration:underline;font:inherit;cursor:pointer}
+
+/* Cookie banner */
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:80;max-width:560px;margin-left:auto;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:0 12px 40px rgba(16,40,44,.18);padding:20px}
+.cookie[hidden]{display:none}
+.cookie h2{font-size:1.05rem}
+.cookie p{font-size:.92rem;color:var(--muted)}
+.cookie .opt{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;margin:8px 0}
+.cookie .opt input{margin-top:4px;width:18px;height:18px;accent-color:var(--accent)}
+.cookie .btn{padding:10px 16px;font-size:.95rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#/" aria-label="Путь к цели — на главную">
+      <span class="logo-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 17l5-5 3.5 3.5L20 7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      Путь к цели
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Меню</button>
+    <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="#/budget">Бюджет</a></li>
+        <li><a href="#/travel">Путешествие</a></li>
+        <li><a href="#/invest">Инвестиции</a></li>
+        <li><a href="#/combine">Совмещаем цели</a></li>
+        <li><a href="#/blog">Блог</a></li>
+        <li><a href="#/faq">FAQ</a></li>
+        <li><a href="#/about">О проекте</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ ГЛАВНАЯ ============ -->
+<section class="page" data-page="home" aria-labelledby="h-home">
+  <div class="container">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Личные финансы без стресса</span>
+        <h1 id="h-home">Бюджет, который ведёт в путешествие и к первым инвестициям</h1>
+        <p class="lead">Разберитесь, куда уходят деньги, накопите на поездку без кредитов и сделайте первые спокойные шаги в инвестициях. Пошагово, с калькулятором и готовым шаблоном.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#/budget" data-track="cta_budget">Составить бюджет</a>
+          <a class="btn btn-outline" href="#/travel#calculator" data-track="cta_travel">Рассчитать накопления на поездку</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Пример прогресса по целям">
+        <p class="small muted" style="margin-bottom:16px">Пример: как выглядит прогресс по целям</p>
+        <div class="goal-row">
+          <div class="goal-head"><span>🛟 Подушка безопасности</span><b>180 000 / 300 000 ₽</b></div>
+          <div class="bar"><span style="width:60%"></span></div>
+        </div>
+        <div class="goal-row">
+          <div class="goal-head"><span>✈️ Путешествие</span><b>150 000 / 240 000 ₽</b></div>
+          <div class="bar sun"><span style="width:62.5%"></span></div>
+        </div>
+        <div class="goal-row">
+          <div class="goal-head"><span>📈 Инвестиции, регулярно</span><b>10 000 ₽ / мес.</b></div>
+          <div class="bar violet"><span style="width:40%"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Как это работает</h2>
+      <ol class="steps grid grid-4">
+        <li class="card step-card"><h3>Узнать расходы</h3><p class="muted">Месяц записываем все траты и видим реальную картину.</p></li>
+        <li class="card step-card"><h3>Распределить бюджет</h3><p class="muted">Выбираем модель, например 50/30/20, и задаём лимиты.</p></li>
+        <li class="card step-card"><h3>Копить на путешествие</h3><p class="muted">Считаем сумму цели и откладываем каждый месяц.</p></li>
+        <li class="card step-card"><h3>Инвестировать</h3><p class="muted">С подушкой и без дорогих долгов начинаем вкладывать на долгий срок.</p></li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>Для кого этот сайт</h2>
+      <div class="grid grid-3">
+        <div class="card"><div class="icon teal" aria-hidden="true">🧾</div><h3>Новичок в бюджете</h3><p class="muted">Не ведёте учёт, а деньги «утекают»? Начните с простой системы и готового шаблона.</p><a href="#/budget">Как составить бюджет →</a></div>
+        <div class="card"><div class="icon sun" aria-hidden="true">✈️</div><h3>Копите на мечту</h3><p class="muted">Хотите поездку через 6–12 месяцев? Рассчитайте ежемесячный взнос и план.</p><a href="#/travel">Копим на путешествие →</a></div>
+        <div class="card"><div class="icon violet" aria-hidden="true">📈</div><h3>Начинающий инвестор</h3><p class="muted">Есть свободные деньги, но нет опыта? Разберёмся в основах и спокойном старте.</p><a href="#/invest">Основы инвестиций →</a></div>
+      </div>
+    </div>
+
+    <div class="section" data-subscribe-slot></div>
+  </div>
+</section>
+
+<!-- ============ БЮДЖЕТ ============ -->
+<section class="page" data-page="budget" aria-labelledby="h-budget" hidden>
+  <div class="container">
+    <span class="eyebrow">Шаг 1</span>
+    <h1 id="h-budget">Личный бюджет: с чего начать</h1>
+    <p class="lead">Бюджет — это не жёсткие ограничения, а план. Он показывает, куда уходят деньги, и оставляет место и для жизни, и для целей.</p>
+
+    <div class="section">
+      <h2>5 шагов к работающему бюджету</h2>
+      <ol class="steps grid grid-3">
+        <li class="card step-card"><h3>Посчитайте доходы</h3><p class="muted">Зарплата, подработки, регулярные поступления. Берите сумму «на руки» после налогов.</p></li>
+        <li class="card step-card"><h3>Разбейте расходы на категории</h3><p class="muted">Жильё, продукты, транспорт, связь, кафе, подписки, покупки. Месяц записывайте каждую трату.</p></li>
+        <li class="card step-card"><h3>Выберите модель распределения</h3><p class="muted">Готовые пропорции избавляют от лишних решений. Варианты в таблице ниже.</p></li>
+        <li class="card step-card"><h3>Автоматизируйте</h3><p class="muted">Настройте автоперевод на накопительный счёт в день зарплаты: сначала платите себе.</p></li>
+        <li class="card step-card"><h3>Разбирайте месяц</h3><p class="muted">Раз в месяц сверяйте план и факт: где перерасход, что поправить в лимитах.</p></li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>Модели распределения доходов</h2>
+      <div class="table-wrap">
+        <table>
+          <caption class="visually-hidden">Модели распределения доходов</caption>
+          <thead><tr><th scope="col">Модель</th><th scope="col" class="num">Обязательные</th><th scope="col" class="num">Желания</th><th scope="col" class="num">Цели и инвестиции</th><th scope="col">Кому подходит</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">50/30/20</th><td class="num">50%</td><td class="num">30%</td><td class="num">20%</td><td>Универсальный старт</td></tr>
+            <tr><th scope="row">60/20/20</th><td class="num">60%</td><td class="num">20%</td><td class="num">20%</td><td>Высокие обязательные расходы: аренда, большой город</td></tr>
+            <tr><th scope="row">Агрессивные накопления</th><td class="num">50%</td><td class="num">15%</td><td class="num">35%</td><td>Есть срочная цель и готовность ужаться</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin-top:10px">«Обязательные» — жильё, продукты, транспорт, кредиты. «Желания» — кафе, развлечения, покупки. «Цели» — подушка, путешествие, инвестиции.</p>
+    </div>
+
+    <div class="section">
+      <h2>Бесплатные материалы</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="icon teal" aria-hidden="true">📊</div>
+          <h3>Шаблон бюджета</h3>
+          <p class="muted">Таблица с категориями, колонками «план / факт / разница» и разделом целей. Открывается в Excel и Google Таблицах.</p>
+          <button class="btn btn-primary" type="button" data-download="template">Скачать шаблон (CSV)</button>
+        </div>
+        <div class="card">
+          <div class="icon sun" aria-hidden="true">🔍</div>
+          <h3>Чек-лист «Где я теряю деньги»</h3>
+          <p class="muted">15 вопросов, которые помогут найти «утечки»: забытые подписки, импульсивные покупки, комиссии.</p>
+          <button class="btn btn-outline" type="button" data-download="checklist">Скачать чек-лист</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-info section">
+      <p><strong>Следующий шаг:</strong> бюджет готов? Пора поставить первую цель. <a href="#/travel">Копим на путешествие →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПУТЕШЕСТВИЕ ============ -->
+<section class="page" data-page="travel" aria-labelledby="h-travel" hidden>
+  <div class="container">
+    <span class="eyebrow">Шаг 2</span>
+    <h1 id="h-travel">Копим на путешествие без кредитов</h1>
+    <p class="lead">Поездка без долга начинается с точной суммы и понятного ежемесячного взноса. Считаем, планируем и откладываем.</p>
+
+    <div class="section grid grid-2">
+      <div class="card">
+        <h2>Из чего складывается сумма цели</h2>
+        <ul class="checklist">
+          <li>Билеты туда и обратно</li>
+          <li>Проживание</li>
+          <li>Питание</li>
+          <li>Местный транспорт</li>
+          <li>Развлечения и экскурсии</li>
+          <li>Страховка</li>
+          <li>Виза и сборы, если нужны</li>
+          <li><strong>Резерв 10–15%</strong> на непредвиденное</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Формула взноса</h2>
+        <p style="font-size:1.25rem"><strong>Сумма цели ÷ количество месяцев = ежемесячный взнос</strong></p>
+        <div class="callout callout-info">
+          <p><strong>Пример:</strong> 240 000 ₽ ÷ 12 мес. = <strong>20 000 ₽ в месяц</strong></p>
+        </div>
+        <p class="muted">Если часть суммы уже отложена, вычтите её из цели. Калькулятор ниже сделает это сам.</p>
+      </div>
+    </div>
+
+    <div class="section card" id="calculator">
+      <h2>Калькулятор накоплений</h2>
+      <p class="muted small">Расчёт выполняется в вашем браузере. Данные никуда не отправляются и не сохраняются.</p>
+      <div class="calc">
+        <form class="form" id="calc-form" novalidate>
+          <div class="field">
+            <label for="c-goal">Сумма цели, ₽</label>
+            <input type="number" id="c-goal" inputmode="decimal" min="1" step="any" placeholder="240000" aria-describedby="e-goal" required>
+            <div class="error" id="e-goal" role="alert"></div>
+          </div>
+          <div class="field">
+            <label for="c-months">Срок, месяцев</label>
+            <input type="number" id="c-months" inputmode="numeric" min="1" step="1" placeholder="12" aria-describedby="e-months" required>
+            <div class="error" id="e-months" role="alert"></div>
+          </div>
+          <div class="field">
+            <label for="c-saved">Уже накоплено, ₽</label>
+            <input type="number" id="c-saved" inputmode="decimal" min="0" step="any" placeholder="0" value="0" aria-describedby="e-saved">
+            <div class="error" id="e-saved" role="alert"></div>
+          </div>
+          <button class="btn btn-primary" type="submit">Рассчитать</button>
+        </form>
+        <div class="result" id="calc-result" aria-live="polite">
+          <div>
+            <div class="small muted">Ежемесячный взнос</div>
+            <div class="result-main" id="r-monthly">—</div>
+          </div>
+          <div class="result-grid">
+            <div><span class="small muted">Осталось накопить</span><b id="r-left">—</b></div>
+            <div><span class="small muted">Прогресс</span><b id="r-pct">—</b></div>
+          </div>
+          <div class="bar sun" aria-hidden="true"><span id="r-bar" style="width:0"></span></div>
+          <p class="small muted" id="r-note" style="margin:0">Введите данные и нажмите «Рассчитать».</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section grid grid-2">
+      <div class="card">
+        <h2>Как ускорить накопления</h2>
+        <ul class="checklist">
+          <li>Откладывайте в день зарплаты, а не «что останется»</li>
+          <li>Отправляйте на цель премии, кешбэк и возвраты</li>
+          <li>Отмените неиспользуемые подписки</li>
+          <li>Ищите билеты заранее и в несезон</li>
+          <li>Продайте ненужные вещи</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Где хранить деньги на поездку</h2>
+        <p>При сроке до года главное — сохранность и доступность денег:</p>
+        <ul class="checklist">
+          <li><strong>Накопительный счёт</strong>: проценты на остаток, деньги можно снять в любой момент</li>
+          <li><strong>Вклад</strong> на срок до даты поездки, если дата известна точно</li>
+        </ul>
+        <div class="callout callout-warn"><p>Не вкладывайте деньги на поездку в акции и другие рыночные инструменты при сроке до года: к нужной дате их стоимость может оказаться ниже вложенной.</p></div>
+      </div>
+    </div>
+
+    <div class="callout callout-info section">
+      <p><strong>Следующий шаг:</strong> когда есть подушка и план на поездку, можно думать о долгосрочных целях. <a href="#/invest">Инвестиции в ценные бумаги →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ИНВЕСТИЦИИ ============ -->
+<section class="page" data-page="invest" aria-labelledby="h-invest" hidden>
+  <div class="container">
+    <span class="eyebrow">Шаг 3</span>
+    <h1 id="h-invest">Инвестиции в ценные бумаги: первые шаги</h1>
+    <p class="lead">Инвестиции подходят для целей на годы вперёд. Разберёмся, когда начинать, какие бывают инструменты и как не наделать ошибок.</p>
+
+    <div class="callout callout-warn" role="note">
+      <p><strong>Важно о рисках.</strong> Материалы носят образовательный характер и не являются индивидуальной инвестиционной рекомендацией. Инвестиции в ценные бумаги связаны с риском, в том числе с возможной потерей вложенных средств. Прошлая доходность не гарантирует результатов в будущем.</p>
+    </div>
+
+    <div class="section card">
+      <h2>Перед тем как инвестировать</h2>
+      <ul class="checklist">
+        <li>Есть <strong>подушка безопасности</strong> на 3–6 месяцев расходов</li>
+        <li><strong>Погашены дорогие долги</strong>: кредитные карты, микрозаймы, потребкредиты под высокий процент</li>
+        <li>Определены <strong>цель и срок</strong>: инвестировать стоит на горизонт от 3–5 лет</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Основные инструменты</h2>
+      <div class="grid grid-3">
+        <div class="card"><div class="icon teal" aria-hidden="true">🧾</div><h3>Облигации</h3><p class="muted">Долговые бумаги: вы даёте в долг государству или компании и получаете купоны. Обычно менее волатильны, чем акции, но тоже несут риски: дефолт эмитента, изменение ставок.</p></div>
+        <div class="card"><div class="icon violet" aria-hidden="true">🏢</div><h3>Акции</h3><p class="muted">Доля в компании. Доход возможен от роста цены и дивидендов, но цена может сильно колебаться и падать. Подходят для долгого горизонта.</p></div>
+        <div class="card"><div class="icon sun" aria-hidden="true">🧺</div><h3>Фонды (ETF / БПИФ)</h3><p class="muted">Готовый «набор» бумаг в одной покупке. Дают диверсификацию с небольшой суммой. Обращайте внимание на комиссию фонда.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Базовые принципы</h2>
+      <div class="grid grid-3">
+        <div class="card"><h3>Диверсификация</h3><p class="muted">Не держите всё в одной бумаге или отрасли.</p></div>
+        <div class="card"><h3>Регулярность</h3><p class="muted">Пополняйте счёт по графику, не пытаясь угадать «лучший момент».</p></div>
+        <div class="card"><h3>Долгий горизонт</h3><p class="muted">Колебания рынка за годы сглаживаются, а за месяцы — нет.</p></div>
+        <div class="card"><h3>Только свободные деньги</h3><p class="muted">Рискуйте лишь теми деньгами, которые не понадобятся в ближайшие годы.</p></div>
+        <div class="card"><h3>Низкие комиссии</h3><p class="muted">Комиссии брокера и фондов заметно снижают итоговый результат на длинной дистанции.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Как начать</h2>
+      <ol class="steps grid grid-4">
+        <li class="card step-card"><h3>Выберите брокера</h3><p class="muted">Только с действующей лицензией. Проверить её можно на сайте регулятора.</p></li>
+        <li class="card step-card"><h3>Откройте счёт</h3><p class="muted">Брокерский счёт или ИИС, если он вам доступен и подходит по условиям. Актуальные правила уточняйте перед открытием.</p></li>
+        <li class="card step-card"><h3>Определите доли</h3><p class="muted">Решите, какая часть уйдёт в облигации, а какая — в акции или фонды, с учётом срока и отношения к риску.</p></li>
+        <li class="card step-card"><h3>Пополняйте регулярно</h3><p class="muted">Фиксированная сумма каждый месяц и пересмотр долей раз в год.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ СОВМЕЩАЕМ ЦЕЛИ ============ -->
+<section class="page" data-page="combine" aria-labelledby="h-combine" hidden>
+  <div class="container">
+    <h1 id="h-combine">Как совмещать подушку, путешествие и инвестиции</h1>
+    <p class="lead">Разные цели — разные «конверты». У каждого свой срок и своё место хранения, поэтому они не мешают друг другу.</p>
+
+    <div class="section">
+      <h2>Система конвертов</h2>
+      <div class="table-wrap">
+        <table>
+          <caption class="visually-hidden">Конверты финансовых целей</caption>
+          <thead><tr><th scope="col">Конверт</th><th scope="col">Цель</th><th scope="col">Срок</th><th scope="col">Где хранить</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">🛟 Подушка безопасности</th><td>Защита от потери дохода и непредвиденных трат</td><td>Всегда под рукой</td><td>Накопительный счёт с быстрым доступом</td></tr>
+            <tr><th scope="row">✈️ Путешествие</th><td>Поездка без кредита</td><td>6–12 месяцев</td><td>Накопительный счёт или вклад до даты поездки</td></tr>
+            <tr><th scope="row">📈 Инвестиции</th><td>Долгосрочный капитал</td><td>От 3–5 лет</td><td>Брокерский счёт или ИИС</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section card">
+      <h2>Пример распределения при доходе 100 000 ₽</h2>
+      <div id="split" class="grid" style="gap:14px"></div>
+      <p class="small muted" style="margin-top:16px">Это пример, а не норма. Начните с пропорций, которые выдерживаете, и корректируйте их раз в месяц.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ БЛОГ ============ -->
+<section class="page" data-page="blog" aria-labelledby="h-blog" hidden>
+  <div class="container">
+    <h1 id="h-blog">Блог</h1>
+    <p class="lead">Короткие практичные статьи о бюджете, накоплениях и инвестициях.</p>
+    <div class="grid grid-3 section" id="blog-list" style="margin-top:32px"></div>
+  </div>
+</section>
+
+<!-- ============ СТАТЬЯ ============ -->
+<section class="page" data-page="article" aria-labelledby="h-article" hidden>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#/">Главная</a> / <a href="#/blog">Блог</a></nav>
+    <article class="article" id="article-body"></article>
+    <div class="section" data-subscribe-slot></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="page" data-page="faq" aria-labelledby="h-faq" hidden>
+  <div class="container" style="max-width:820px">
+    <h1 id="h-faq">Частые вопросы</h1>
+    <div class="accordion section" style="margin-top:24px">
+      <div class="acc-item">
+        <h2 style="margin:0;font-size:inherit"><button class="acc-btn" aria-expanded="false" aria-controls="faq1" id="faq1-b">С какой суммы можно начать инвестировать?</button></h2>
+        <div class="acc-panel" id="faq1" role="region" aria-labelledby="faq1-b" hidden><p>Технически — с нескольких сотен или тысяч рублей: многие фонды и облигации доступны по небольшой цене. Важнее не сумма, а готовность: есть подушка безопасности, нет дорогих долгов, а деньги не понадобятся в ближайшие 3–5 лет. Регулярные небольшие пополнения обычно полезнее разовой крупной покупки.</p></div>
+      </div>
+      <div class="acc-item">
+        <h2 style="margin:0;font-size:inherit"><button class="acc-btn" aria-expanded="false" aria-controls="faq2" id="faq2-b">Что важнее: копить на поездку или инвестировать?</button></h2>
+        <div class="acc-panel" id="faq2" role="region" aria-labelledby="faq2-b" hidden><p>Это разные цели, и их можно совмещать. Сначала подушка безопасности, затем параллельно два конверта: на поездку (короткий срок) и на инвестиции (долгий срок). Пропорцию определяет ваш приоритет. Пример есть в разделе <a href="#/combine">«Как совмещать цели»</a>.</p></div>
+      </div>
+      <div class="acc-item">
+        <h2 style="margin:0;font-size:inherit"><button class="acc-btn" aria-expanded="false" aria-controls="faq3" id="faq3-b">Можно ли инвестировать деньги, отложенные на поездку?</button></h2>
+        <div class="acc-panel" id="faq3" role="region" aria-labelledby="faq3-b" hidden><p>Если поездка через год или раньше — не стоит. Рынок может просесть именно тогда, когда деньги понадобятся. Для таких сроков подходят накопительный счёт или вклад: доход скромнее, зато сумма сохранится.</p></div>
+      </div>
+      <div class="acc-item">
+        <h2 style="margin:0;font-size:inherit"><button class="acc-btn" aria-expanded="false" aria-controls="faq4" id="faq4-b">Как часто пересматривать бюджет?</button></h2>
+        <div class="acc-panel" id="faq4" role="region" aria-labelledby="faq4-b" hidden><p>Короткий разбор — раз в месяц: сравнить план и факт, поправить лимиты. Глубокий пересмотр — при крупных изменениях: новая работа, переезд, рождение ребёнка, новая цель.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ О ПРОЕКТЕ ============ -->
+<section class="page" data-page="about" aria-labelledby="h-about" hidden>
+  <div class="container">
+    <h1 id="h-about">О проекте</h1>
+    <p class="lead">«Путь к цели» помогает относиться к деньгам как к понятному процессу. Без жаргона, давления и обещаний быстрой прибыли: только последовательные шаги от бюджета к мечте и долгосрочному капиталу.</p>
+
+    <div class="section grid grid-2">
+      <div class="card">
+        <h2>Контакты</h2>
+        <ul class="checklist">
+          <li>E-mail: <a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li>Telegram: <a href="#" rel="noopener">@put_k_celi</a></li>
+          <li>VK: <a href="#" rel="noopener">vk.com/put_k_celi</a></li>
+        </ul>
+        <p class="small muted" style="margin-top:12px">Контакты указаны для примера — замените их на реальные.</p>
+      </div>
+      <div class="card">
+        <h2>Обратная связь</h2>
+        <form class="form" id="contact-form" novalidate>
+          <div class="field"><label for="f-name">Имя</label><input type="text" id="f-name" autocomplete="name" required><div class="error" role="alert"></div></div>
+          <div class="field"><label for="f-email">E-mail</label><input type="email" id="f-email" autocomplete="email" required><div class="error" role="alert"></div></div>
+          <div class="field"><label for="f-msg">Сообщение</label><textarea id="f-msg" rows="4" required></textarea><div class="error" role="alert"></div></div>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="consent"><input type="checkbox" required> <span>Я согласен(на) на обработку персональных данных в соответствии с <a href="#/privacy">политикой конфиденциальности</a></span></label>
+          <div class="error" data-consent-error role="alert"></div>
+          <button class="btn btn-primary" type="submit">Отправить</button>
+          <div class="form-msg" hidden></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="section" data-subscribe-slot></div>
+  </div>
+</section>
+
+<!-- ============ ПОЛИТИКА ============ -->
+<section class="page" data-page="privacy" aria-labelledby="h-privacy" hidden>
+  <div class="container article">
+    <h1 id="h-privacy">Политика конфиденциальности</h1>
+    <p class="callout callout-warn">Шаблон для заполнения. Перед публикацией текст должен проверить юрист с учётом законодательства целевой страны.</p>
+    <h2>1. Какие данные мы собираем</h2>
+    <p>Адрес электронной почты, если вы подписались на рассылку. Имя, e-mail и текст сообщения, если вы заполнили форму обратной связи. Обезличенные данные о посещениях — только если вы разрешили аналитические cookies.</p>
+    <h2>2. Зачем</h2>
+    <p>Чтобы отправлять рассылку, на которую вы подписались, отвечать на обращения и улучшать сайт.</p>
+    <h2>3. Согласие и отзыв</h2>
+    <p>Данные обрабатываются только с вашего явного согласия. Отозвать его можно в любой момент: по ссылке в письме или написав нам на e-mail.</p>
+    <h2>4. Калькулятор</h2>
+    <p>Данные, которые вы вводите в калькулятор, обрабатываются только в вашем браузере и не передаются на сервер.</p>
+    <h2>5. Cookies</h2>
+    <p>Необходимые cookies обеспечивают работу сайта. Аналитические включаются только с вашего согласия. Изменить выбор можно по ссылке «Настройки cookies» в футере.</p>
+  </div>
+</section>
+
+<!-- ============ СОГЛАШЕНИЕ ============ -->
+<section class="page" data-page="terms" aria-labelledby="h-terms" hidden>
+  <div class="container article">
+    <h1 id="h-terms">Пользовательское соглашение</h1>
+    <p class="callout callout-warn">Шаблон для заполнения. Перед публикацией текст должен проверить юрист.</p>
+    <h2>1. Характер материалов</h2>
+    <p>Материалы сайта носят информационный и образовательный характер и не являются индивидуальной инвестиционной рекомендацией, офертой или рекламой конкретных финансовых инструментов.</p>
+    <h2>2. Ответственность</h2>
+    <p>Решения об управлении своими средствами пользователь принимает самостоятельно. Сайт не гарантирует доходность каких-либо инструментов.</p>
+    <h2>3. Партнёрские материалы</h2>
+    <p>Рекламные и партнёрские ссылки, если они появятся, будут явно помечены.</p>
+    <h2>4. Авторские права</h2>
+    <p>Копирование материалов допускается со ссылкой на источник.</p>
+  </div>
+</section>
+
+<!-- ============ КАРТА САЙТА ============ -->
+<section class="page" data-page="sitemap" aria-labelledby="h-sitemap" hidden>
+  <div class="container article">
+    <h1 id="h-sitemap">Карта сайта</h1>
+    <ul id="sitemap-list"></ul>
+  </div>
+</section>
+
+<!-- ============ 404 ============ -->
+<section class="page" data-page="404" aria-labelledby="h-404" hidden>
+  <div class="container">
+    <h1 id="h-404">Страница не найдена</h1>
+    <p class="lead">Такой страницы нет. Вернитесь на главную или загляните в блог.</p>
+    <div class="btn-row"><a class="btn btn-primary" href="#/">На главную</a><a class="btn btn-outline" href="#/blog">В блог</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- Шаблон формы подписки -->
+<template id="subscribe-tpl">
+  <div class="subscribe">
+    <div>
+      <h2>Один полезный материал в неделю</h2>
+      <p>И бесплатный шаблон бюджета сразу после подписки. Без спама, отписаться можно в один клик.</p>
+    </div>
+    <form class="form subscribe-form" novalidate>
+      <div class="field">
+        <label class="visually-hidden" data-for="email">E-mail</label>
+        <div class="inline">
+          <input type="email" data-id="email" placeholder="Ваш e-mail" autocomplete="email" required>
+          <button class="btn btn-primary" type="submit">Подписаться</button>
+        </div>
+        <div class="error" role="alert"></div>
+      </div>
+      <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="consent"><input type="checkbox" required> <span>Согласен(на) получать рассылку и на обработку e-mail по <a href="#/privacy">политике конфиденциальности</a></span></label>
+      <div class="error" data-consent-error role="alert"></div>
+      <div class="form-msg" hidden></div>
+    </form>
+  </div>
+</template>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#/" style="color:#fff"><span class="logo-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 17l5-5 3.5 3.5L20 7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Путь к цели</a>
+        <p style="margin-top:12px">Бюджет, который ведёт в путешествие и к первым инвестициям.</p>
+      </div>
+      <div>
+        <h3>Разделы</h3>
+        <ul>
+          <li><a href="#/budget">Личный бюджет</a></li>
+          <li><a href="#/travel">Копим на путешествие</a></li>
+          <li><a href="#/invest">Инвестиции</a></li>
+          <li><a href="#/combine">Как совмещать цели</a></li>
+          <li><a href="#/blog">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Информация</h3>
+        <ul>
+          <li><a href="#/faq">FAQ</a></li>
+          <li><a href="#/about">О проекте и контакты</a></li>
+          <li><a href="#/privacy">Политика конфиденциальности</a></li>
+          <li><a href="#/terms">Пользовательское соглашение</a></li>
+          <li><a href="#/sitemap">Карта сайта</a></li>
+          <li><button class="link-btn" type="button" id="cookie-settings">Настройки cookies</button></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Материалы сайта носят информационный и образовательный характер и не являются индивидуальной инвестиционной рекомендацией. Инвестиции в ценные бумаги связаны с риском, в том числе с возможной потерей вложенных средств. Прошлая доходность не гарантирует результатов в будущем.<br><br>© <span id="year"></span> Путь к цели</p>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie" role="dialog" aria-labelledby="cookie-title" hidden>
+  <h2 id="cookie-title">Мы используем cookies</h2>
+  <p>Необходимые cookies нужны для работы сайта. Аналитические помогают понять, какие материалы полезны. По умолчанию они выключены.</p>
+  <label class="opt"><input type="checkbox" checked disabled> <span>Необходимые (всегда включены)</span></label>
+  <label class="opt"><input type="checkbox" id="cookie-analytics"> <span>Аналитические</span></label>
+  <div class="btn-row" style="margin-top:12px">
+    <button class="btn btn-outline" type="button" id="cookie-save">Сохранить выбор</button>
+    <button class="btn btn-primary" type="button" id="cookie-all">Принять все</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Утилиты ---------- */
+  var store = {
+    get: function(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } },
+    set: function(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  };
+  var rub = function(n){ return new Intl.NumberFormat("ru-RU",{maximumFractionDigits:0}).format(Math.round(n)) + " ₽"; };
+  var $ = function(s,r){ return (r||document).querySelector(s); };
+  var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+
+  /* ---------- Аналитика (только с согласия) ---------- */
+  window.dataLayer = window.dataLayer || [];
+  function track(event, params){
+    var c = store.get("cookieConsent");
+    if (!c || !c.analytics) return;
+    window.dataLayer.push(Object.assign({event:event, ts:Date.now()}, params||{}));
+    // Здесь подключается счётчик (Яндекс Метрика / GA4) после согласия
+  }
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("[data-track]");
+    if (t) track("cta_click", {cta:t.getAttribute("data-track")});
+  });
+
+  /* ---------- Статьи блога ---------- */
+  var posts = [
+    {slug:"utechki", cat:"Бюджет", cls:"", date:"2026-09-01", title:"7 способов найти «утекающие» деньги в бюджете",
+     excerpt:"Подписки, мелкие покупки и комиссии незаметно съедают тысячи рублей в месяц. Как их найти.",
+     body:"<p>Чаще всего деньги уходят не на крупные покупки, а на мелкие регулярные траты, которых мы не замечаем. Вот где искать.</p><ol><li><strong>Подписки.</strong> Выпишите все сервисы, за которые списываются деньги. Отключите те, которыми не пользовались месяц.</li><li><strong>Доставка и такси.</strong> Посчитайте сумму за месяц — она часто удивляет.</li><li><strong>Кофе и перекусы.</strong> 300 ₽ в день — это около 9 000 ₽ в месяц.</li><li><strong>Банковские комиссии.</strong> Платное обслуживание карт, SMS-информирование, переводы.</li><li><strong>Импульсивные покупки.</strong> Введите правило 48 часов для покупок дороже заданной суммы.</li><li><strong>Связь и интернет.</strong> Проверьте, не переплачиваете ли за неиспользуемый тариф.</li><li><strong>Продукты, которые выбрасываются.</strong> Планируйте меню на неделю и ходите в магазин со списком.</li></ol><p>Начните с одного месяца честного учёта — и утечки станут видны сами. Удобнее всего вести учёт в <a href='#/budget'>шаблоне бюджета</a>.</p>",
+     links:[["Личный бюджет","#/budget"]]},
+    {slug:"otpusk-za-polgoda", cat:"Путешествия", cls:"sun", date:"2026-09-08", title:"Как накопить на отпуск за полгода",
+     excerpt:"Пошаговый план: считаем сумму, делим на месяцы и находим, откуда взять деньги.",
+     body:"<p>Шесть месяцев — реальный срок для поездки, если действовать по плану.</p><h2>Шаг 1. Посчитайте сумму</h2><p>Билеты, проживание, питание, транспорт, развлечения, страховка, виза и обязательный резерв 10–15%.</p><h2>Шаг 2. Разделите на 6</h2><p>Например, 150 000 ₽ ÷ 6 = 25 000 ₽ в месяц. Если сумма не помещается в бюджет, сдвиньте срок или упростите маршрут.</p><h2>Шаг 3. Найдите деньги</h2><ul><li>временно перейдите на модель «агрессивных накоплений»;</li><li>направляйте на цель премии и кешбэк;</li><li>сократите одну-две категории «желаний».</li></ul><h2>Шаг 4. Автоматизируйте</h2><p>Автоперевод на накопительный счёт в день зарплаты — и вы не будете тратить эти деньги случайно.</p><p>Рассчитайте свой взнос в <a href='#/travel#calculator'>калькуляторе накоплений</a>.</p>",
+     links:[["Калькулятор накоплений","#/travel#calculator"]]},
+    {slug:"obligacii", cat:"Инвестиции", cls:"violet", date:"2026-09-15", title:"Что такое облигации простыми словами",
+     excerpt:"Облигация — это долг, который вам возвращают с процентами. Разбираем, как это работает и где риски.",
+     body:"<p>Покупая облигацию, вы даёте в долг государству или компании. Взамен эмитент обещает платить купоны — проценты — и вернуть номинал в дату погашения.</p><h2>Основные понятия</h2><ul><li><strong>Номинал</strong> — сумма, которую вернут при погашении.</li><li><strong>Купон</strong> — регулярная выплата процентов.</li><li><strong>Дата погашения</strong> — когда долг вернут.</li><li><strong>Доходность к погашению</strong> — итоговая доходность с учётом цены покупки и купонов.</li></ul><h2>Какие есть риски</h2><ul><li>эмитент может не выплатить долг (дефолт);</li><li>рыночная цена облигации меняется вместе со ставками, и при продаже до погашения можно получить меньше вложенного;</li><li>инфляция может «съесть» часть дохода.</li></ul><p>Облигации обычно считаются более спокойным инструментом, чем акции, но они не безрисковые. Подробнее — в разделе <a href='#/invest'>об инвестициях</a>.</p>",
+     links:[["Инвестиции в ценные бумаги","#/invest"]]},
+    {slug:"podushka", cat:"Бюджет", cls:"", date:"2026-09-22", title:"Подушка безопасности: сколько нужно и где хранить",
+     excerpt:"Почему подушка идёт первой, как посчитать её размер и где держать деньги.",
+     body:"<p>Подушка безопасности — запас на случай потери дохода, болезни или срочного ремонта. Именно она позволяет не брать кредит в трудный момент и не продавать инвестиции в неудачное время.</p><h2>Сколько нужно</h2><p>Ориентир — <strong>3–6 месяцев обязательных расходов</strong>. Если доход нестабилен или вы единственный кормилец в семье, ближе к 6 и больше.</p><h2>Где хранить</h2><ul><li>накопительный счёт с возможностью снять деньги в любой момент;</li><li>часть можно держать на краткосрочном вкладе, если остальное доступно сразу.</li></ul><h2>Как собрать</h2><p>Откладывайте фиксированную сумму каждый месяц. Даже 5 000 ₽ в месяц за год дают 60 000 ₽.</p><p>Посмотрите, как подушка сочетается с другими целями, в разделе <a href='#/combine'>«Как совмещать цели»</a>.</p>",
+     links:[["Как совмещать цели","#/combine"]]},
+    {slug:"oshibki-investorov", cat:"Инвестиции", cls:"violet", date:"2026-09-29", title:"Типичные ошибки начинающих инвесторов",
+     excerpt:"Инвестиции без подушки, погоня за «горячими» бумагами и паника при падении. Как этого избежать.",
+     body:"<p>Большинство ошибок связано не с выбором бумаг, а с поведением.</p><ol><li><strong>Инвестировать без подушки.</strong> Срочная трата заставит продавать бумаги, возможно, в минус.</li><li><strong>Вкладывать деньги на краткосрочную цель.</strong> На поездку через полгода рынок не годится.</li><li><strong>Всё в одну бумагу.</strong> Отсутствие диверсификации увеличивает риск.</li><li><strong>Покупать на хайпе.</strong> «Все покупают» — не аргумент.</li><li><strong>Паниковать при падении.</strong> Колебания — нормальная часть рынка на длинной дистанции.</li><li><strong>Не замечать комиссии.</strong> Частые сделки и дорогие фонды уменьшают результат.</li><li><strong>Ждать гарантированной доходности.</strong> Её на рынке ценных бумаг нет.</li></ol><p>Чек-лист «Перед тем как инвестировать» есть в разделе <a href='#/invest'>об инвестициях</a>.</p>",
+     links:[["Инвестиции в ценные бумаги","#/invest"]]},
+    {slug:"prilozheniya", cat:"Бюджет", cls:"", date:"2026-10-01", title:"Приложения для учёта расходов: сравнение",
+     excerpt:"Таблица, банковское приложение или отдельный сервис — что выбрать для учёта.",
+     body:"<p>Лучший способ учёта — тот, которым вы будете пользоваться. Сравним основные подходы.</p><div class='table-wrap'><table><thead><tr><th>Способ</th><th>Плюсы</th><th>Минусы</th></tr></thead><tbody><tr><td>Таблица (Excel, Google)</td><td>Гибко, бесплатно, всё под контролем</td><td>Нужно вносить вручную</td></tr><tr><td>Аналитика в банковском приложении</td><td>Автоматически, без усилий</td><td>Видны только траты по одной карте, категории не всегда точны</td></tr><tr><td>Отдельное приложение для учёта</td><td>Удобный ввод, графики, напоминания</td><td>Может быть платным, нужно привыкнуть</td></tr></tbody></table></div><p style='margin-top:1em'>Совет: начните с <a href='#/budget'>нашего шаблона</a> на месяц. Когда поймёте свои категории, выбрать приложение будет проще.</p><p class='small muted'>Мы не рекламируем конкретные приложения. Если в статье появятся партнёрские ссылки, они будут помечены.</p>",
+     links:[["Личный бюджет","#/budget"]]},
+    {slug:"deshevle-puteshestvovat", cat:"Путешествия", cls:"sun", date:"2026-10-02", title:"Как путешествовать дешевле и не терять в комфорте",
+     excerpt:"Несезон, гибкие даты, подписки на снижение цен и другие способы сэкономить.",
+     body:"<p>Сэкономить на поездке можно без ночёвок в хостелах и перелётов с тремя пересадками.</p><ul><li><strong>Гибкие даты.</strong> Сдвиг вылета на день-два часто заметно снижает цену.</li><li><strong>Несезон.</strong> Межсезонье — меньше людей и ниже цены на жильё.</li><li><strong>Отслеживание цен.</strong> Подпишитесь на уведомления о снижении цен на билеты.</li><li><strong>Жильё с кухней.</strong> Завтраки дома экономят бюджет на питание.</li><li><strong>Проездные.</strong> В городах туристические карты часто выгоднее разовых билетов.</li><li><strong>Страховка заранее.</strong> Сравните несколько вариантов, а не берите первую попавшуюся.</li></ul><p>Сэкономленное можно сразу вычесть из цели и пересчитать взнос в <a href='#/travel#calculator'>калькуляторе</a>.</p>",
+     links:[["Копим на путешествие","#/travel"]]}
+  ];
+  var fmtDate = function(s){ return new Date(s+"T00:00:00").toLocaleDateString("ru-RU",{day:"numeric",month:"long",year:"numeric"}); };
+
+  $("#blog-list").innerHTML = posts.slice().reverse().map(function(p){
+    return '<a class="card post-card" href="#/blog/'+p.slug+'"><span class="tag '+p.cls+'">'+p.cat+'</span><h3>'+p.title+'</h3><p class="muted">'+p.excerpt+'</p><span class="post-meta">'+fmtDate(p.date)+'</span></a>';
+  }).join("");
+
+  function renderArticle(p){
+    var el = $("#article-body");
+    var others = posts.filter(function(x){return x.slug!==p.slug;}).slice(0,3);
+    el.innerHTML = '<span class="tag '+p.cls+'">'+p.cat+'</span><h1 id="h-article">'+p.title+'</h1><p class="muted small">'+fmtDate(p.date)+'</p>'+p.body+
+      '<div class="callout callout-info"><p><strong>По теме на сайте:</strong> '+p.links.map(function(l){return '<a href="'+l[1]+'">'+l[0]+'</a>';}).join(", ")+'</p></div>'+
+      '<h2>Читайте также</h2><ul>'+others.map(function(o){return '<li><a href="#/blog/'+o.slug+'">'+o.title+'</a></li>';}).join("")+'</ul>';
+    readTracked = false;
+  }
+
+  /* ---------- Пример распределения ---------- */
+  var split = [["Обязательные расходы",50000,""],["Личные траты",20000,"violet"],["Путешествие",15000,"sun"],["Инвестиции",10000,"violet"],["Подушка безопасности",5000,""]];
+  $("#split").innerHTML = split.map(function(s){
+    var pct = s[1]/1000;
+    return '<div><div class="goal-head"><span>'+s[0]+'</span><b>'+rub(s[1])+' · '+pct+'%</b></div><div class="bar '+s[2]+'"><span style="width:'+pct+'%"></span></div></div>';
+  }).join("");
+
+  /* ---------- Роутинг ---------- */
+  var meta = {
+    home:["Путь к цели — бюджет, путешествие и первые инвестиции","Как составить бюджет, накопить на путешествие без кредитов и сделать первые шаги в инвестициях."],
+    budget:["Личный бюджет: 5 шагов и модели 50/30/20 — Путь к цели","Пошаговая инструкция по составлению личного бюджета, модели распределения доходов и бесплатный шаблон."],
+    travel:["Копим на путешествие + калькулятор — Путь к цели","Как рассчитать сумму на поездку и ежемесячный взнос. Калькулятор накоплений и советы, где хранить деньги."],
+    invest:["Инвестиции в ценные бумаги для начинающих — Путь к цели","Облигации, акции, фонды: чек-лист перед стартом, базовые принципы и инструкция, как начать."],
+    combine:["Как совмещать подушку, путешествие и инвестиции — Путь к цели","Система конвертов и пример распределения дохода между финансовыми целями."],
+    blog:["Блог — Путь к цели","Статьи о бюджете, накоплениях, путешествиях и инвестициях."],
+    faq:["Частые вопросы — Путь к цели","Ответы на частые вопросы о бюджете, накоплениях и инвестициях."],
+    about:["О проекте и контакты — Путь к цели","Миссия проекта, контакты и форма обратной связи."],
+    privacy:["Политика конфиденциальности — Путь к цели","Как мы обрабатываем персональные данные."],
+    terms:["Пользовательское соглашение — Путь к цели","Условия использования материалов сайта."],
+    sitemap:["Карта сайта — Путь к цели","Все разделы сайта."],
+    "404":["Страница не найдена — Путь к цели",""]
+  };
+  var funnel = ["budget","travel","invest"];
+  var lastPage = null;
+
+  $("#sitemap-list").innerHTML =
+    [["Главная","#/"],["Личный бюджет","#/budget"],["Копим на путешествие","#/travel"],["Инвестиции в ценные бумаги","#/invest"],["Как совмещать цели","#/combine"],["Блог","#/blog"]]
+      .map(function(l){return '<li><a href="'+l[1]+'">'+l[0]+'</a></li>';}).join("") +
+    '<li><ul>'+posts.map(function(p){return '<li><a href="#/blog/'+p.slug+'">'+p.title+'</a></li>';}).join("")+'</ul></li>' +
+    [["FAQ","#/faq"],["О проекте и контакты","#/about"],["Политика конфиденциальности","#/privacy"],["Пользовательское соглашение","#/terms"]]
+      .map(function(l){return '<li><a href="'+l[1]+'">'+l[0]+'</a></li>';}).join("");
+
+  var currentHash = location.hash;
+  function route(){
+    var raw = currentHash.replace(/^#\/?/, "");
+    var anchor = null;
+    var hashPos = raw.indexOf("#");
+    if (hashPos > -1){ anchor = raw.slice(hashPos+1); raw = raw.slice(0,hashPos); }
+    var parts = raw.split("/").filter(Boolean);
+    var page = parts[0] || "home";
+    var post = null;
+
+    if (page === "blog" && parts[1]){
+      post = posts.filter(function(p){return p.slug===parts[1];})[0];
+      page = post ? "article" : "404";
+    } else if (!meta[page]) { page = "404"; }
+
+    $$(".page").forEach(function(s){ s.hidden = s.getAttribute("data-page") !== page; });
+
+    var m = post ? [post.title+" — Путь к цели", post.excerpt] : meta[page];
+    document.title = m[0];
+    $('meta[name="description"]').setAttribute("content", m[1]);
+    $('meta[property="og:title"]').setAttribute("content", m[0]);
+    if (post) renderArticle(post);
+
+    var navKey = page === "article" ? "blog" : page;
+    $$(".main-nav a").forEach(function(a){
+      if (a.getAttribute("href") === "#/"+navKey) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+    });
+    $("#main-nav").classList.remove("open");
+    $(".nav-toggle").setAttribute("aria-expanded","false");
+
+    if (lastPage && funnel.indexOf(lastPage) > -1 && funnel.indexOf(page) > -1 && lastPage !== page)
+      track("section_transition", {from:lastPage, to:page});
+    lastPage = page;
+
+    var target = anchor && document.getElementById(anchor);
+    if (target){ target.scrollIntoView(); }
+    else {
+      window.scrollTo(0,0);
+      var h = $('.page[data-page="'+page+'"] h1');
+      if (h){ h.setAttribute("tabindex","-1"); h.focus({preventScroll:true}); }
+    }
+  }
+  // Внутренние ссылки обрабатываем сами: так навигация работает и в превью/песочницах,
+  // где переход по хешу заблокирован, и при открытии файла напрямую.
+  function go(href){
+    currentHash = href;
+    try { if (location.hash !== href) history.pushState(null, "", href); } catch(e){}
+    route();
+  }
+  document.addEventListener("click", function(e){
+    var a = e.target.closest('a[href^="#/"]');
+    if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    go(a.getAttribute("href"));
+  });
+  function syncFromLocation(){ currentHash = location.hash; route(); }
+  window.addEventListener("hashchange", syncFromLocation);
+  window.addEventListener("popstate", syncFromLocation);
+
+  $(".nav-toggle").addEventListener("click", function(){
+    var open = $("#main-nav").classList.toggle("open");
+    this.setAttribute("aria-expanded", String(open));
+  });
+
+  /* ---------- Глубина прочтения статьи ---------- */
+  var readTracked = false;
+  window.addEventListener("scroll", function(){
+    if (readTracked || $('.page[data-page="article"]').hidden) return;
+    var art = $("#article-body");
+    if (art.getBoundingClientRect().bottom <= window.innerHeight){
+      readTracked = true;
+      track("article_read_complete", {article: location.hash});
+    }
+  }, {passive:true});
+
+  /* ---------- Формы подписки ---------- */
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var tpl = $("#subscribe-tpl");
+  $$("[data-subscribe-slot]").forEach(function(slot, i){
+    var node = tpl.content.cloneNode(true);
+    var input = node.querySelector('[data-id="email"]');
+    var label = node.querySelector('[data-for="email"]');
+    input.id = "sub-email-"+i; label.setAttribute("for", input.id);
+    slot.appendChild(node);
+  });
+
+  function setErr(el, msg){
+    var box = el.closest(".field") ? el.closest(".field").querySelector(".error") : null;
+    if (box) box.textContent = msg || "";
+    el.setAttribute("aria-invalid", msg ? "true" : "false");
+  }
+  function consentCheck(form){
+    var cb = form.querySelector('.consent input');
+    var box = form.querySelector('[data-consent-error]');
+    var ok = cb.checked;
+    box.textContent = ok ? "" : "Нужно согласие на обработку данных.";
+    return ok;
+  }
+  function showMsg(form, text, ok){
+    var m = form.querySelector(".form-msg");
+    m.hidden = false; m.className = "form-msg " + (ok ? "ok" : "err"); m.textContent = text;
+  }
+
+  $$(".subscribe-form").forEach(function(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      if (form.querySelector(".hp").value) return; // бот
+      var email = form.querySelector('input[type=email]');
+      var v = email.value.trim();
+      var ok = emailRe.test(v);
+      setErr(email, ok ? "" : "Введите корректный e-mail.");
+      var c = consentCheck(form);
+      if (!ok || !c) return;
+      // Здесь отправка на сервис рассылки (бэкенд). Фиксируем согласие:
+      var log = store.get("subscribeConsent") || [];
+      log.push({consent:true, at:new Date().toISOString()});
+      store.set("subscribeConsent", log);
+      track("subscribe", {});
+      showMsg(form, "Спасибо! Проверьте почту — шаблон бюджета уже в пути.", true);
+      form.reset();
+    });
+  });
+
+  $("#contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var form = this;
+    if (form.querySelector(".hp").value) return;
+    var name = $("#f-name"), email = $("#f-email"), msg = $("#f-msg");
+    var okN = name.value.trim().length >= 2, okE = emailRe.test(email.value.trim()), okM = msg.value.trim().length >= 5;
+    setErr(name, okN ? "" : "Укажите имя.");
+    setErr(email, okE ? "" : "Введите корректный e-mail.");
+    setErr(msg, okM ? "" : "Напишите сообщение.");
+    var c = consentCheck(form);
+    if (!(okN && okE && okM && c)) return;
+    showMsg(form, "Сообщение отправлено. Ответим в течение двух рабочих дней.", true);
+    form.reset();
+  });
+
+  /* ---------- Калькулятор ---------- */
+  var calcStarted = false;
+  ["#c-goal","#c-months","#c-saved"].forEach(function(id){
+    $(id).addEventListener("input", function(){ if(!calcStarted){ calcStarted = true; track("calculator_start",{}); } });
+  });
+  $("#calc-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var gEl = $("#c-goal"), mEl = $("#c-months"), sEl = $("#c-saved");
+    var g = parseFloat(gEl.value), m = parseFloat(mEl.value), s = sEl.value === "" ? 0 : parseFloat(sEl.value);
+    var valid = true;
+    if (!(g > 0)){ setErr(gEl, "Введите сумму больше 0."); valid = false; } else setErr(gEl);
+    if (!(m >= 1) || Math.floor(m) !== m){ setErr(mEl, "Срок — целое число месяцев, не меньше 1."); valid = false; } else setErr(mEl);
+    if (isNaN(s) || s < 0){ setErr(sEl, "Накопления не могут быть отрицательными."); valid = false; } else setErr(sEl);
+    var res = $("#calc-result");
+    if (!valid){ res.classList.remove("done"); return; }
+
+    if (s >= g){
+      res.classList.add("done");
+      $("#r-monthly").textContent = "Цель уже достигнута 🎉";
+      $("#r-left").textContent = rub(0);
+      $("#r-pct").textContent = "100%";
+      $("#r-bar").style.width = "100%";
+      $("#r-note").textContent = s > g ? "У вас даже есть запас: " + rub(s-g) + ". Можно бронировать!" : "Можно бронировать!";
+    } else {
+      res.classList.remove("done");
+      var left = g - s, monthly = Math.ceil(left / m), pct = s / g * 100;
+      $("#r-monthly").textContent = rub(monthly) + " / мес.";
+      $("#r-left").textContent = rub(left);
+      $("#r-pct").textContent = (pct < 10 && pct > 0 ? pct.toFixed(1) : Math.floor(pct)) + "%";
+      $("#r-bar").style.width = pct + "%";
+      $("#r-note").textContent = "Откладывая " + rub(monthly) + " в месяц, вы соберёте " + rub(g) + " за " + m + " мес. Совет: настройте автоперевод в день зарплаты.";
+    }
+    track("calculator_result", {goal:g, months:m});
+  });
+
+  /* ---------- Загрузки ---------- */
+  function download(name, content, type){
+    var blob = new Blob([content], {type:type});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
+  }
+  var templateCsv = [
+    "Раздел;Категория;План, ₽;Факт, ₽;Разница, ₽;Комментарий",
+    "Доходы;Зарплата;;;;",
+    "Доходы;Подработка;;;;",
+    "Доходы;Прочее;;;;",
+    "Обязательные (50%);Жильё и коммунальные;;;;",
+    "Обязательные (50%);Продукты;;;;",
+    "Обязательные (50%);Транспорт;;;;",
+    "Обязательные (50%);Связь и интернет;;;;",
+    "Обязательные (50%);Кредиты;;;;",
+    "Желания (30%);Кафе и доставка;;;;",
+    "Желания (30%);Развлечения;;;;",
+    "Желания (30%);Покупки;;;;",
+    "Желания (30%);Подписки;;;;",
+    "Цели (20%);Подушка безопасности;;;;",
+    "Цели (20%);Путешествие;;;;",
+    "Цели (20%);Инвестиции;;;;",
+    "Итого;Доходы − Расходы;;;;"
+  ].join("\r\n");
+  var checklistTxt = [
+    "ЧЕК-ЛИСТ «ГДЕ Я ТЕРЯЮ ДЕНЬГИ» — Путь к цели","",
+    "[ ] 1. Я знаю, сколько потратил(а) в прошлом месяце",
+    "[ ] 2. Я проверил(а) все платные подписки",
+    "[ ] 3. Я знаю, сколько трачу на доставку еды и такси",
+    "[ ] 4. Я не плачу за обслуживание карт, которыми не пользуюсь",
+    "[ ] 5. Я не плачу за SMS-информирование, если есть push-уведомления",
+    "[ ] 6. Я хожу в магазин со списком",
+    "[ ] 7. Я не выбрасываю много продуктов",
+    "[ ] 8. Я жду 48 часов перед крупной незапланированной покупкой",
+    "[ ] 9. Мой тариф связи соответствует тому, чем я пользуюсь",
+    "[ ] 10. У меня нет долга по кредитной карте с процентами",
+    "[ ] 11. Я не плачу пени и штрафы за просрочки",
+    "[ ] 12. Я использую кешбэк в категориях, где трачу больше всего",
+    "[ ] 13. Я откладываю деньги в день зарплаты, а не в конце месяца",
+    "[ ] 14. Я знаю свои 3 самые большие категории расходов",
+    "[ ] 15. Раз в месяц я сверяю план и факт","",
+    "Каждый пункт без галочки — потенциальная «утечка». Начните с одного."
+  ].join("\r\n");
+  $$("[data-download]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var k = b.getAttribute("data-download");
+      if (k === "template") download("shablon-byudzheta.csv", "﻿"+templateCsv, "text/csv;charset=utf-8");
+      else download("chek-list-gde-ya-teryayu-dengi.txt", "﻿"+checklistTxt, "text/plain;charset=utf-8");
+      track("download", {file:k});
+    });
+  });
+
+  /* ---------- FAQ-аккордеон ---------- */
+  $$(".acc-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      document.getElementById(btn.getAttribute("aria-controls")).hidden = open;
+    });
+  });
+
+  /* ---------- Cookies ---------- */
+  var banner = $("#cookie");
+  function openCookie(){
+    var c = store.get("cookieConsent");
+    $("#cookie-analytics").checked = !!(c && c.analytics);
+    banner.hidden = false;
+  }
+  function saveCookie(analytics){
+    store.set("cookieConsent", {necessary:true, analytics:analytics, at:new Date().toISOString()});
+    banner.hidden = true;
+  }
+  $("#cookie-save").addEventListener("click", function(){ saveCookie($("#cookie-analytics").checked); });
+  $("#cookie-all").addEventListener("click", function(){ saveCookie(true); });
+  $("#cookie-settings").addEventListener("click", openCookie);
+  if (!store.get("cookieConsent")) openCookie();
+
+  $("#year").textContent = new Date().getFullYear();
+  route();
+})();
+</script>
+</body>
+</html>
